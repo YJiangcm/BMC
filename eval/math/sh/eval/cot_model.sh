@@ -3,10 +3,10 @@ set -ex
 cd eval
 
 PROMPT_TYPE="platypus_fs"
-MODEL_NAME_OR_PATH="../../../../outputs/llama-2-7b-base-dpo-bmc-qa"
+MODEL_NAME_OR_PATH="../../outputs/llama-2-7b-base-dpo-bmc-qa"
 
 
-OUTPUT_DIR="../../results/eval"
+OUTPUT_DIR="results/eval"
 SPLIT="test"
 NUM_TEST_SAMPLE=-1
 
