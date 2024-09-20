@@ -1,9 +1,13 @@
 # Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization
 
+Direct preference optimization (DPO), a widely adopted offline preference optimization algorithm, aims to align large language models (LLMs) with humandesired behaviors using pairwise preference data. **However, the winning response and the losing response within pairwise data are generated isolatedly, leading to weak correlations between them as well as suboptimal alignment performance.** To address this issue, we propose an effective framework named BMC, for bridging and modeling correlations in pairwise data. 
+
+- Firstly, we increase the consistency and informativeness of the pairwise preference signals through _targeted modifications_, synthesizing a pseudo-winning response by improving the losing response with the winning response as a reference.
+- Secondly, we identify that DPO alone is insufficient to model these correlations and capture nuanced variations. Therefore, we propose learning token-level correlations by _dynamically_ leveraging the policy model’s confidence during training.
 
 <p align="center">
     <br>
-    <img src="figures/method.png" width="800"/>
+    <img src="figures/method.png" width="600"/>
     <br>
 </p>
 
