@@ -1,6 +1,14 @@
 # Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization
 
-## Install Requirements
+
+## 🔍 Table of Contents
+  - [⚙️ Install Requirements](#install-requirements)
+  - [💻 Training Scripts](#training-scripts)
+  - [💹 Evaluation](#evaluation)
+  - [📝 Citation](#citation)
+  - 
+
+## ⚙️ Install Requirements
 
 Our codebase is built upon the [alignment-handbook repo](https://github.com/huggingface/alignment-handbook). The following steps will guide you through the installation process.
 
@@ -28,10 +36,10 @@ python -m pip install flash-attn --no-build-isolation
 
 You will also need vLLM installed, which can be done by running:
 ```shell
-pip install vllm
+pip install vllm==0.4.0
 ```
 
-## Training Scripts
+## 💻 Training Scripts
 We provide training config files for the three setups including question answering, mathematical reasoning, and instruction following. The training config is set for 4xA800 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
 
 ### Question Answering
@@ -62,7 +70,7 @@ ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/dee
 ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_dpo_bmc.py training_configs/instruction_following/mistral-7b-base-dpo-bmc.yaml
 ```
 
-## Evaluation
+## 💹 Evaluation
 We conduct three downstream scenarios for a comprehensive evaluation, including question answering, mathematical reasoning, and instruction following.
 
 ### Question Answering
@@ -86,7 +94,7 @@ We follow the official implementation for evaluation on AlpacaEval 2 and Arena-H
 
 
 
-## Citation
+## 📝 Citation
 Please cite our paper if you find the repo helpful in your work:
 
 ```bibtex
