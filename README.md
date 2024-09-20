@@ -1,6 +1,13 @@
 # Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization
 
 
+<p align="center">
+    <br>
+    <img src="figures/method.png" width="1000"/>
+    <br>
+</p>
+
+
 ## 🔍 Table of Contents
   - [⚙️ Install Requirements](#install-requirements)
   - [💻 Training Scripts](#training-scripts)
