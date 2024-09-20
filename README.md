@@ -26,6 +26,11 @@ You will also need Flash Attention 2 installed, which can be done by running:
 python -m pip install flash-attn --no-build-isolation
 ```
 
+You will also need vLLM installed, which can be done by running:
+```shell
+pip install vllm
+```
+
 ## Training Scripts
 We provide training config files for the three setups including question answering, mathematical reasoning, and instruction following. The training config is set for 4xA800 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
 
