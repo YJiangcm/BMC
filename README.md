@@ -3,7 +3,7 @@
 
 <p align="center">
     <br>
-    <img src="figures/method.png" width="1000"/>
+    <img src="figures/method.png" width="800"/>
     <br>
 </p>
 
