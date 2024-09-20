@@ -1,0 +1,1 @@
+export CUDA_VISIBLE_DEVICES="0,1,2,3" bash sh/eval/cot_model.sh

@@ -1,0 +1,42 @@
+# Model arguments
+model_name_or_path: outputs/llama-2-7b-sft-math
+torch_dtype: null
+use_flash_attention_2: true
+
+# Data training arguments
+chat_template: "{{ bos_token}}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] | trim + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ '### Response:\n' + message['content'] | trim + eos_token + '\n\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '### Response:\n' }}{% endif %}"
+dataset_mixer:
+  training_data/math_dpo_bmc: 1.0
+dataset_splits:
+- train
+preprocessing_num_workers: 12
+
+# DPOTrainer arguments
+bf16: true
+loss_type: sigmoid
+beta: 0.05
+dpo_bmc_delta: 2.5
+do_eval: false
+gradient_accumulation_steps: 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: False
+hub_model_id: llama-2-7b-base-dpo-bmc-math
+learning_rate: 5.0e-7
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 2048
+max_prompt_length: 1800
+num_train_epochs: 1
+optim: adamw_torch
+output_dir: outputs/llama-2-7b-base-dpo-bmc-math
+run_name: llama-2-7b-base-dpo-bmc-math
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 4
+push_to_hub: false
+save_strategy: "steps"
+save_steps: 1000000
+save_total_limit: 20
+seed: 42
+warmup_ratio: 0.1
