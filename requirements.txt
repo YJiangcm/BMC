@@ -4,3 +4,4 @@ huggingface-hub==0.24.7
 nltk==3.9.1
 transformers==4.42.3
 trl==0.9.6
+vllm==0.4.0
