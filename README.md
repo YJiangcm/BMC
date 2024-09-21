@@ -45,7 +45,7 @@ You will also need Flash Attention 2 installed, which can be done by running:
 python -m pip install flash-attn --no-build-isolation
 ```
 
-Then, install other required packages:
+Finally, install other required packages:
 ```shell
 pip install -r requirements.txt
 ```
