@@ -1,7 +1,7 @@
 # Model arguments
 model_name_or_path: outputs/llama-2-7b-sft-qa
 torch_dtype: null
-use_flash_attention_2: true
+attn_implementation: flash_attention_2
 
 # Data training arguments
 chat_template: "{{ bos_token}}{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] | trim + '\n\n' }}{% elif message['role'] == 'assistant' %}{{ '### Response:\n' + message['content'] | trim + eos_token + '\n\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '### Response:\n' }}{% endif %}"
