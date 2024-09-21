@@ -45,9 +45,9 @@ You will also need Flash Attention 2 installed, which can be done by running:
 python -m pip install flash-attn --no-build-isolation
 ```
 
-You will also need vLLM installed, which can be done by running:
+Then, install other required packages:
 ```shell
-pip install vllm==0.4.0
+pip install -r requirements.txt
 ```
 
 ## 💻 Training Scripts
