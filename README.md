@@ -51,6 +51,8 @@ pip install -r requirements.txt
 ```
 
 ## 💻 Training Scripts
+Before training, we need to utilize `gpt-4-0125-preview` to obtain the pseudo-winning reponse by making targeted modification of the losing response. This process is achieved by calling OpenAI's API. The obtained data can be found in the `training_data` directory.
+
 We provide training config files for the three setups including question answering, mathematical reasoning, and instruction following. The training config is set for 4xA800 GPUs. You may need to adjust `num_processes` and `per_device_train_batch_size` based on your computation environment. 
 
 ### Question Answering
