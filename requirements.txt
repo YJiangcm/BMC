@@ -2,6 +2,7 @@ accelerate==0.34.2
 alignment-handbook==0.4.0.dev0
 huggingface-hub==0.24.7
 nltk==3.9.1
+openai==1.3.5
 transformers==4.42.3
 trl==0.9.6
 vllm==0.4.0
