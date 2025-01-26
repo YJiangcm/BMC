@@ -111,10 +111,11 @@ We follow the official implementation for evaluation on AlpacaEval 2 and Arena-H
 Please cite our paper if you find the repo helpful in your work:
 
 ```bibtex
-@article{jiang2024dpobmc,
-  title={Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization},
-  author={Jiang, Yuxin and Huang, bo and Wang, Yufei and Zeng Xingshan and Li, Liangyou and Wang, Yasheng and Jiang, Xin and Shang, Lifeng and Tang, Ruiming and Wang, Wei},
-  journal={arXiv preprint arXiv:2408.07471},
-  year={2024}
+@inproceedings{jiang2025dpobmc,
+title={Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization},
+author={Jiang, Yuxin and Huang, bo and Wang, Yufei and Zeng Xingshan and Li, Liangyou and Wang, Yasheng and Jiang, Xin and Shang, Lifeng and Tang, Ruiming and Wang, Wei},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=hRwxZmcvW9}
 }
 ```
