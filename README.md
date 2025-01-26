@@ -1,4 +1,4 @@
-# Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization
+# Bridging and Modeling Correlations in Pairwise Data for Direct Preference Optimization (ICLR 2025)
 
 Direct preference optimization (DPO), a widely adopted offline preference optimization algorithm, aims to align large language models (LLMs) with humandesired behaviors using pairwise preference data. **However, the winning response and the losing response within pairwise data are generated isolatedly, leading to weak correlations between them as well as suboptimal alignment performance.** To address this issue, we propose an effective framework named BMC, for bridging and modeling correlations in pairwise data. 
 
